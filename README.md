@@ -31,7 +31,7 @@ navega al directorio del frontend e instala las dependencias ejecutando:
 ```
 cd AppSpotify-front
 
-npm install -g @angular/cli@14
+npm install
 ```
 ### Configuracion Base de datos
 
