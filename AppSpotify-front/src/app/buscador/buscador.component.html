@@ -1,0 +1,27 @@
+<div>
+  <input type="text" [(ngModel)]="query" placeholder="Buscar en Spotify">
+  <button (click)="buscar()">Buscar</button>
+</div>
+
+<table *ngIf="albums.length > 0">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre del Artista</th>
+      <th>Nombre del Álbum</th>
+      <th>Cantidad de Canciones</th>
+      <th>Año de Salida</th>
+      <th>Favorito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let album of albums">
+      <td><img [src]="album.imagenalbumurl || album.images[0]?.url" [alt]="album.nombreAlbum || album.name" width="50"></td>
+      <td>{{ album.nombreartista || album.artists[0]?.name }}</td>
+      <td>{{ album.nombreAlbum || album.name }}</td>
+      <td>{{ album.totalcanciones || album.total_tracks }}</td>
+      <td>{{ album.anoalbum || (album.release_date | date: 'yyyy') }}</td>
+      <td><button (click)="agregarAFavoritos(album)">★</button></td>
+    </tr>
+  </tbody>
+</table>
