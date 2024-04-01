@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const querystring = require('querystring');
 const dotenv = require('dotenv');
-const pool = require('../db'); // Ajusta la ruta relativa según sea necesario
+const pool = require('../db');
 
 
 dotenv.config();
@@ -54,8 +54,6 @@ async function buscarSpotify(query, accessToken) {
   }
 }
 
-// Asumiendo que este código va en spotify.controller.js
-
 // Función para agregar un álbum a favoritos
 async function agregarFavorito(albumData) {
   const { nombreartista, nombreAlbum, totalcanciones, anoalbum, imagenalbumurl, idspotify } = albumData;
@@ -84,7 +82,7 @@ async function obtenerFavoritos() {
 
 module.exports = {
 obtenerAccessToken,
-buscarSpotify, // Esta ya estaba definida
+buscarSpotify,
 agregarFavorito,
 obtenerFavoritos
 };
