@@ -19,27 +19,38 @@ git clone <url-del-repositorio>
 
 Navega al directorio del backend y ejecuta el siguiente comando para instalar las dependencias necesarias:
 
+```
 cd AppSpotify
-npm install
 
+npm install
+```
 ### Dependencias del Frontent
 
 navega al directorio del frontend e instala las dependencias ejecutando:
 
+```
 cd AppSpotify-front
-npm install
 
+npm install -g @angular/cli@14
+```
 ### Configuracion Base de datos
 
+```
 Inicia sesión en tu servidor PostgreSQL y crea una base de datos llamada AppSpotify.
+
 Ejecuta el script CREATE_ALBUMS.sql para crear la tabla necesaria en tu base de datos
+```
 
 ### Iniciar Backend
-
+```
 cd AppSpotify
-node index.js
 
+node index.js
+```
 ### Iniciar Frontend
 
+```
 cd AppSpotify-front
+
 ng serve
+```
