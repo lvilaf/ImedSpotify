@@ -35,11 +35,9 @@ npm install -g @angular/cli@14
 ```
 ### Configuracion Base de datos
 
-```
 Inicia sesión en tu servidor PostgreSQL y crea una base de datos llamada AppSpotify.
 
 Ejecuta el script CREATE_ALBUMS.sql para crear la tabla necesaria en tu base de datos
-```
 
 ### Iniciar Backend
 ```
